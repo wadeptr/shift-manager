@@ -1,0 +1,30 @@
+[mode]
+# "local" or "ssh"
+type = "local"
+
+[schedule]
+warning_minutes = 5
+
+[[schedule.triggers]]
+type = "schedule"
+suspend_at = "23:00"
+wake_at = "08:00"
+# weekdays = [1,2,3,4,5]  # Mon-Fri only; omit for all days
+
+# [[schedule.triggers]]
+# type = "thermal"
+# threshold_celsius = 85
+
+[target]
+# SSH mode only:
+# host = "user@192.168.1.100"
+# ssh_key = "/home/pi/.ssh/id_ed25519"
+# mac_address = "aa:bb:cc:dd:ee:ff"
+# ssh_port = 22
+
+[web]
+bind = "127.0.0.1:8765"
+
+[state]
+# Path to manifest file (defaults to ~/.local/share/shift-manager/manifest.json)
+# manifest_path = "/home/user/.local/share/shift-manager/manifest.json"

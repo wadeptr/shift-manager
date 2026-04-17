@@ -1,0 +1,22 @@
+[package]
+name = "shift-manager-agents"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+shift-manager-core = { path = "../core" }
+tokio.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+uuid.workspace = true
+chrono.workspace = true
+nix.workspace = true
+
+[dev-dependencies]
+mockall.workspace = true
+tokio = { workspace = true, features = ["full"] }
+shift-manager-core = { path = "../core", features = ["test-utils"] }

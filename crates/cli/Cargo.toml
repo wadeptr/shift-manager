@@ -1,0 +1,21 @@
+[package]
+name = "shift-manager"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "shift-manager"
+path = "src/main.rs"
+
+[dependencies]
+shift-manager-core = { path = "../core" }
+shift-manager-daemon = { path = "../daemon" }
+shift-manager-state = { path = "../state" }
+tokio.workspace = true
+clap.workspace = true
+anyhow.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+toml.workspace = true

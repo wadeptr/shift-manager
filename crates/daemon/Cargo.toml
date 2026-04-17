@@ -1,0 +1,29 @@
+[package]
+name = "shift-manager-daemon"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+shift-manager-core = { path = "../core" }
+shift-manager-agents = { path = "../agents" }
+shift-manager-platforms = { path = "../platforms" }
+shift-manager-state = { path = "../state" }
+shift-manager-web = { path = "../web" }
+tokio.workspace = true
+async-trait.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+anyhow.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+tracing-subscriber.workspace = true
+tokio-cron-scheduler.workspace = true
+chrono.workspace = true
+config.workspace = true
+toml.workspace = true
+
+[dev-dependencies]
+mockall.workspace = true
+tokio = { workspace = true, features = ["full"] }
+shift-manager-core = { path = "../core", features = ["test-utils"] }
+tempfile = "3"
